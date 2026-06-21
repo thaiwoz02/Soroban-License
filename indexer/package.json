@@ -1,0 +1,25 @@
+{
+  "name": "@soroban-license/indexer",
+  "version": "0.1.0",
+  "description": "Event-driven Soroban contract event indexer",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@stellar/stellar-sdk": "12.3.0",
+    "dotenv": "16.4.5",
+    "ioredis": "5.4.1",
+    "knex": "3.1.0",
+    "pg": "8.12.0",
+    "pino": "9.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/pg": "8.11.6",
+    "tsx": "4.16.2",
+    "typescript": "5.5.3"
+  }
+}
