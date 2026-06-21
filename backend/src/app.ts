@@ -14,6 +14,8 @@ import apiKeyRoutes from './routes/apiKeys';
 import contentRoutes from './routes/content';
 import verifyRoutes from './routes/verify';
 import authRoutes from './routes/auth';
+import analyticsRoutes from './routes/analytics';
+import webhookRoutes from './routes/webhooks';
 
 export function createApp(): Application {
   const app = express();
@@ -56,6 +58,8 @@ export function createApp(): Application {
   app.use('/api/v1/api-keys', apiKeyRoutes);
   app.use('/api/v1/content', contentRoutes);
   app.use('/api/v1/verify', verifyRoutes);
+  app.use('/api/v1/analytics', analyticsRoutes);
+  app.use('/api/v1/webhooks', webhookRoutes);
 
   // ── Error handling ─────────────────────────────────────────────────────────
   app.use(notFound);
